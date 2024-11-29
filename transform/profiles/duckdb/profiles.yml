@@ -1,0 +1,15 @@
+meltano:
+  target: "{{ env_var('MELTANO_ENVIRONMENT', 'dev') }}"
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DBT_DUCKDB_PATH') }}"
+      threads: 4
+    staging:
+      type: duckdb
+      path: "{{ env_var('DBT_DUCKDB_PATH') }}"
+      threads: 4
+    prod:
+      type: duckdb
+      path: "{{ env_var('DBT_DUCKDB_PATH') }}"
+      threads: 4

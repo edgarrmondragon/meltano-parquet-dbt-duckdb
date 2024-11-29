@@ -1,0 +1,9 @@
+# dbt sources
+sources:
+- name: fedidb
+  meta:
+    external_location: "{{ env_var('MELTANO_PROJECT_ROOT') }}/output/{name}/{name}-*.gz.parquet"
+  tables:
+  - name: popular_accounts
+  - name: servers
+  - name: software

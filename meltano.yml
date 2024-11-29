@@ -1,0 +1,25 @@
+version: 1
+default_environment: dev
+project_id: 7a521447-d554-4c59-a4a1-9ca32af41882
+environments:
+- name: dev
+- name: staging
+- name: prod
+send_anonymous_usage_stats: false
+plugins:
+  extractors:
+  - name: tap-fedidb
+    variant: edgarrmondragon
+    pip_url: tap-fedidb
+  loaders:
+  - name: target-parquet
+    variant: automattic
+    pip_url: git+https://github.com/edgarrmondragon/target-parquet.git@update-dependencies
+    config:
+      destination_path: $MELTANO_PROJECT_ROOT/output
+  utilities:
+  - name: dbt-duckdb
+    variant: jwills
+    pip_url: dbt-core dbt-duckdb meltano-dbt-ext~=0.3.0
+venv:
+  backend: uv
