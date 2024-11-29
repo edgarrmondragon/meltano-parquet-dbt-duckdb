@@ -1,5 +1,7 @@
 # Meltano, Apache Parquet, dbt and duckdb
 
+MRE for https://github.com/duckdb/dbt-duckdb/issues/481.
+
 ## Instructions
 
 ### Prerequisites
