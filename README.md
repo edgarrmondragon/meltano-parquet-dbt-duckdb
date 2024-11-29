@@ -28,7 +28,7 @@
     | arstechnica  | mastodon.social             | 170302          |
     | stux         | mstdn.social                | 141953          |
 
-6. You can also confirm the compile query with `meltano invoke dbt-duckdb compile --select "accounts"`:
+6. You can also confirm the compiled query with `meltano invoke dbt-duckdb compile --select "accounts"`:
 
     ```sql
     with accounts as (
